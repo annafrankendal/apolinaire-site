@@ -6,13 +6,13 @@ import { products, SHOP_URL } from '@/data/products'
 import { imgSrc } from '@/lib/img'
 
 const productImages: Record<string, string> = {
-  no1: '/images/no1.webp',
-  no2: '/images/no2.png',
-  no3: '/images/no3.webp',
-  no4: '/images/no4.webp',
-  no5: '/images/no5.webp',
-  no6: '/images/no6.webp',
-  no7: '/images/no7.webp',
+  no1: imgSrc('/images/no1.webp'),
+  no2: imgSrc('/images/no2.png'),
+  no3: imgSrc('/images/no3.webp'),
+  no4: imgSrc('/images/no4.webp'),
+  no5: imgSrc('/images/no5.webp'),
+  no6: imgSrc('/images/no6.webp'),
+  no7: imgSrc('/images/no7.webp'),
 }
 
 const placeholderColors: Record<string, string> = {}
