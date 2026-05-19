@@ -13,7 +13,7 @@ import './index.css'
 function App() {
   return (
     <HelmetProvider>
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/for-hemmet" element={<ForHemmet />} />
