@@ -5,6 +5,25 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>apolinaire-site</title>
+    <script>
+      (function(l) {
+        if (l.search[1] === 'p') {
+          var decoded = l.search.slice(1).split('&').reduce(function(q, r) {
+            var kv = r.split('=');
+            if (kv[0] === 'p') q.p = kv[1];
+            if (kv[0] === 'q') q.q = kv[1];
+            return q;
+          }, {p:'', q:''});
+          if (decoded.p) {
+            window.history.replaceState(null, null,
+              l.pathname + '/' + decoded.p.replace(/~and~/g, '&') +
+              (decoded.q ? '?' + decoded.q.replace(/~and~/g, '&') : '') +
+              l.hash
+            );
+          }
+        }
+      }(window.location));
+    </script>
   </head>
   <body>
     <div id="root"></div>
