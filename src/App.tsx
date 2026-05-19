@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import Index from '@/pages/Index'
 import ForHemmet from '@/pages/ForHemmet'
@@ -13,7 +13,7 @@ import './index.css'
 function App() {
   return (
     <HelmetProvider>
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/for-hemmet" element={<ForHemmet />} />
@@ -24,7 +24,7 @@ function App() {
         <Route path="/smaker" element={<Smaker />} />
         <Route path="/inspiration" element={<Journal />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
     </HelmetProvider>
   )
 }
