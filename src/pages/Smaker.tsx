@@ -3,6 +3,7 @@ import { SiteFooter } from '@/components/site/SiteFooter'
 import { Button } from '@/components/ui/button'
 import { SEO } from '@/components/SEO'
 import { products, SHOP_URL } from '@/data/products'
+import { imgSrc } from '@/lib/img'
 
 const productImages: Record<string, string> = {
   no1: '/images/no1.webp',
@@ -78,7 +79,7 @@ export default function Smaker() {
                   )}
                   {p.nobel && (
                     <div className="absolute top-3 left-3 bg-ink px-2 py-1.5">
-                      <img src="/images/nobel-emblem.png" alt="Nobelmiddag 2025" style={{ height: '22px', width: 'auto', filter: 'brightness(0) invert(1)' }} />
+                      <img src={imgSrc('/images/nobel-emblem.png')} alt="Nobelmiddag 2025" style={{ height: '22px', width: 'auto', filter: 'brightness(0) invert(1)' }} />
                     </div>
                   )}
                 </div>
@@ -117,7 +118,7 @@ export default function Smaker() {
             <a href={SHOP_URL} target="_blank" rel="noreferrer">Beställ via Mylla</a>
           </Button>
           <div className="flex items-center justify-center gap-3 mt-8">
-            <img src="/images/nobel-emblem.png" alt="Nobelmiddag 2025" style={{ height: '28px', width: 'auto', filter: 'brightness(0) invert(1)', opacity: 0.4 }} />
+            <img src={imgSrc('/images/nobel-emblem.png')} alt="Nobelmiddag 2025" style={{ height: '28px', width: 'auto', filter: 'brightness(0) invert(1)', opacity: 0.4 }} />
             <p className="eyebrow text-bone/30" style={{ fontSize: '0.58rem' }}>
               Nobelmiddagen 2025 · No3 Bronsmedalj must-SM 2022 · No5, No6, No7 Silvermedalj must-SM 2022
             </p>

@@ -4,8 +4,9 @@ import { Button } from '@/components/ui/button'
 import { Link } from 'react-router-dom'
 import { SHOP_URL } from '@/data/products'
 import { SEO } from '@/components/SEO'
+import { imgSrc } from '@/lib/img'
 
-const img = '/images/fisk-pairing-bord.jpg'
+const img = imgSrc('/images/fisk-pairing-bord.jpg')
 
 export default function JournalFisk() {
   return (
@@ -71,7 +72,7 @@ export default function JournalFisk() {
           <div className="border-t border-border mt-16 pt-12 text-center">
             <p className="font-display text-2xl text-ink mb-2">No3 · Äpple, Citron & Ingefära</p>
             <div className="flex items-center justify-center gap-3 mb-4">
-              <img src="/images/nobel-emblem.png" alt="Nobelmiddag 2025" style={{ height: '28px', width: 'auto' }} />
+              <img src={imgSrc('/images/nobel-emblem.png')} alt="Nobelmiddag 2025" style={{ height: '28px', width: 'auto' }} />
               <p className="text-muted-foreground text-sm">Bronsmedalj must-SM 2022</p>
             </div>
             <p className="text-muted-foreground mb-8 text-sm">

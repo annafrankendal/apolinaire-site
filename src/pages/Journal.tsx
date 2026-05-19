@@ -2,10 +2,11 @@ import { Link } from 'react-router-dom'
 import { SiteHeader } from '@/components/site/SiteHeader'
 import { SiteFooter } from '@/components/site/SiteFooter'
 import { SEO } from '@/components/SEO'
+import { imgSrc } from '@/lib/img'
 
-const imgSeafood = '/images/fisk-pairing-bord.jpg'
-const imgDinner = '/images/glasen-bricka.jpg'
-const imgSummer = '/images/no6-asparges.jpg'
+const imgSeafood = imgSrc('/images/fisk-pairing-bord.jpg')
+const imgDinner = imgSrc('/images/glasen-bricka.jpg')
+const imgSummer = imgSrc('/images/no6-asparges.jpg')
 
 const articles = [
   { tag: 'Guide', title: 'Dryck till fisk. Smakförhöjaren med precision', img: imgSeafood, href: '/journal/fisk', pos: 'center center' },

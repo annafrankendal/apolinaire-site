@@ -3,6 +3,7 @@ import { SiteHeader } from '@/components/site/SiteHeader'
 import { SiteFooter } from '@/components/site/SiteFooter'
 import { SHOP_URL } from '@/data/products'
 import { SEO } from '@/components/SEO'
+import { imgSrc } from '@/lib/img'
 
 const fordelar = [
   { nr: '01', title: 'Förhöjer maten', desc: 'Skapad för pairing. Syra, frukt och struktur som lyfter rätten utan att ta fokus från den. Gästen smakar mer av maten.' },
@@ -19,8 +20,8 @@ const aterforsaljare = [
   'Stockfiller',
 ]
 
-const imgHero = '/images/hero-servering-is.jpg'
-const imgKok = '/images/nobel-servering.jpg'
+const imgHero = imgSrc('/images/hero-servering-is.jpg')
+const imgKok = imgSrc('/images/nobel-servering.jpg')
 
 export default function ForServering() {
   return (
@@ -29,7 +30,7 @@ export default function ForServering() {
         title="Alkoholfri dryck för restaurang och servering | Apolinaire"
         description="Apolinaire är en alkoholfri smakförhöjare för professionell servering. Pairing till varje rätt. Leverantör Nobelmiddag 2025. Beställ via Martin & Servera eller Menigo."
         canonical="https://apolinaire.se/foretag"
-        image="/images/hero-servering-is.jpg"
+        image={imgSrc('/images/hero-servering-is.jpg')}
       />
       <SiteHeader />
 
@@ -41,7 +42,7 @@ export default function ForServering() {
         <div className="relative h-full container-editorial flex flex-col items-center justify-end text-center pb-20">
           <div className="fade-up">
             <div className="inline-flex items-center gap-3 mb-8 px-4 py-2 border border-white/30 rounded-full">
-              <img src="/images/nobel-emblem.png" alt="Leverantör Nobelmiddag 2025" style={{ height: '20px', width: 'auto', filter: 'brightness(0) invert(1)', opacity: 0.85 }} />
+              <img src={imgSrc('/images/nobel-emblem.png')} alt="Leverantör Nobelmiddag 2025" style={{ height: '20px', width: 'auto', filter: 'brightness(0) invert(1)', opacity: 0.85 }} />
               <span style={{ color: 'rgba(244,239,228,0.85)', fontSize: '0.6rem', letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 500 }}>
                 Serverades på Nobelmiddagen 2025
               </span>
@@ -86,7 +87,7 @@ export default function ForServering() {
       <section className="py-20 bg-linen border-b border-border">
         <div className="container-editorial grid md:grid-cols-2 gap-16 items-center">
           <div className="flex items-center justify-center aspect-[4/3] bg-linen">
-            <img src="/images/nobel-emblem-guld.png" alt="Leverantör Nobelmiddag 2025" style={{ width: '70%', height: 'auto' }} />
+            <img src={imgSrc('/images/nobel-emblem-guld.png')} alt="Leverantör Nobelmiddag 2025" style={{ width: '70%', height: 'auto' }} />
           </div>
           <div>
             <h2 className="font-display text-ink mb-6" style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.5rem)', lineHeight: 1.1 }}>
@@ -127,7 +128,7 @@ export default function ForServering() {
       {/* BILDBRYTNING */}
       <div className="w-full overflow-hidden" style={{ height: '420px' }}>
         <img
-          src="/images/bardisk-flaskor.jpg"
+          src={imgSrc('/images/bardisk-flaskor.jpg')}
           alt="Apolinaire på bardisk – No3, No6 och No7 i restaurangmiljö"
           className="w-full h-full object-cover"
           style={{ objectPosition: 'center 70%' }}
@@ -153,21 +154,21 @@ export default function ForServering() {
                 nr: 'No3',
                 sub: 'Äpple, Citron & Ingefära',
                 badge: 'Nobel',
-                img: '/images/no3-render.jpg',
+                img: imgSrc('/images/no3-render.jpg'),
                 ratter: ['Sushi & heta skaldjursrätter', 'Asiatiska smaker', 'Lättare fisk'],
               },
               {
                 nr: 'No4',
                 sub: 'Äpple, Lingon & Lime',
                 badge: 'Silvermedalj must-SM 2022',
-                img: '/images/no4-render.jpg',
+                img: imgSrc('/images/no4-render.jpg'),
                 ratter: ['Lammrätter', 'Charkuterier', 'Smakrika ostar'],
               },
               {
                 nr: 'No6',
                 sub: 'Äpple, Svarta vinbär, Lime & Fänkål',
                 badge: 'Silvermedalj must-SM 2022',
-                img: '/images/no6-render.jpg',
+                img: imgSrc('/images/no6-render.jpg'),
                 ratter: ['Vilt & mörkt kött', 'Gräddiga fiskgrytor', 'Rostade rotsaker'],
               },
             ].map((p) => (
@@ -189,7 +190,7 @@ export default function ForServering() {
                       <div className="text-muted-foreground" style={{ fontSize: '0.8rem' }}>{p.sub}</div>
                     </div>
                     {p.badge === 'Nobel' ? (
-                      <img src="/images/nobel-emblem.png" alt="Nobelmiddag 2025" style={{ height: '36px', width: 'auto', flexShrink: 0 }} />
+                      <img src={imgSrc('/images/nobel-emblem.png')} alt="Nobelmiddag 2025" style={{ height: '36px', width: 'auto', flexShrink: 0 }} />
                     ) : (
                       <span className="eyebrow text-muted-foreground text-right" style={{ fontSize: '0.48rem', maxWidth: '80px' }}>★ {p.badge}</span>
                     )}
@@ -214,7 +215,7 @@ export default function ForServering() {
           {/* Bild */}
           <div className="overflow-hidden" style={{ minHeight: '520px' }}>
             <img
-              src="/images/matkasse.webp"
+              src={imgSrc('/images/matkasse.webp')}
               alt="Apolinaire No3 bredvid en premiumkasse med råvaror"
               className="w-full h-full object-cover"
               style={{ minHeight: '520px' }}

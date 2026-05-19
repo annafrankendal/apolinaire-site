@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { SHOP_URL } from '@/data/products'
+import { imgSrc } from '@/lib/img'
 
 export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false)
@@ -35,7 +36,7 @@ export function SiteHeader() {
       <div className="container-editorial flex items-center justify-between py-5">
         <Link to="/" className="flex items-center">
           <img
-            src="/images/logo-apolinaire.png"
+            src={imgSrc('/images/logo-apolinaire.png')}
             alt="Apolinaire"
             style={{
               height: '18px',

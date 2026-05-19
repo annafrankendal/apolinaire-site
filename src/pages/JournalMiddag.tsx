@@ -4,8 +4,9 @@ import { Button } from '@/components/ui/button'
 import { Link } from 'react-router-dom'
 import { SHOP_URL } from '@/data/products'
 import { SEO } from '@/components/SEO'
+import { imgSrc } from '@/lib/img'
 
-const img = '/images/glasen-bricka.jpg'
+const img = imgSrc('/images/glasen-bricka.jpg')
 
 export default function JournalMiddag() {
   return (

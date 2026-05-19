@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { SHOP_URL } from '@/data/products'
+import { imgSrc } from '@/lib/img'
 
 export function SiteFooter() {
   return (
@@ -44,7 +45,7 @@ export function SiteFooter() {
               Instagram →
             </a>
             <div className="mt-6">
-              <img src="/images/nobel-emblem.png" alt="Leverantör Nobelmiddag 2025" style={{ height: '48px', width: 'auto', filter: 'brightness(0) invert(1)', opacity: 0.5 }} />
+              <img src={imgSrc('/images/nobel-emblem.png')} alt="Leverantör Nobelmiddag 2025" style={{ height: '48px', width: 'auto', filter: 'brightness(0) invert(1)', opacity: 0.5 }} />
             </div>
           </div>
         </div>

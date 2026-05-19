@@ -4,10 +4,11 @@ import { SiteHeader } from '@/components/site/SiteHeader'
 import { SiteFooter } from '@/components/site/SiteFooter'
 import { TableConfigurator } from '@/components/site/TableConfigurator'
 import { products } from '@/data/products'
+import { imgSrc } from '@/lib/img'
 
-const imgSeafood = '/images/fisk-pairing-bord.jpg'
-const imgDinner = '/images/glasen-bricka.jpg'
-const imgSummer = '/images/no6-asparges.jpg'
+const imgSeafood = imgSrc('/images/fisk-pairing-bord.jpg')
+const imgDinner = imgSrc('/images/glasen-bricka.jpg')
+const imgSummer = imgSrc('/images/no6-asparges.jpg')
 
 const articles = [
   { tag: 'Guide', title: 'Dryck till fisk. Smakförhöjaren med precision', img: imgSeafood, href: '/journal/fisk', pos: 'center center' },
@@ -26,19 +27,19 @@ const Index = () => {
         title="Apolinaire. Alkoholfri dryck för gastronomi"
         description="Apolinaire är en alkoholfri smakförhöjare för gastronomi. Sju smaker skapade för pairing till mat, fine dining och hemma middagar. Serverades på Nobelmiddagen 2025."
         canonical="https://apolinaire.se"
-        image="/images/midsommar.jpg"
+        image={imgSrc('/images/midsommar.jpg')}
       />
       <SiteHeader />
 
       {/* HERO */}
       <section className="relative h-screen min-h-[720px] w-full overflow-hidden">
-        <img src="/images/bord-darmeddig.jpg" alt="Fyra vänner skrattar tillsammans vid bordet med Apolinaire"
+        <img src={imgSrc('/images/bord-darmeddig.jpg')} alt="Fyra vänner skrattar tillsammans vid bordet med Apolinaire"
           className="absolute inset-0 w-full h-full object-cover" style={{ objectPosition: 'center 40%' }} />
         <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(26,26,24,0.4), rgba(26,26,24,0.2) 40%, rgba(26,26,24,0.65))' }} />
         <div className="relative h-full container-editorial flex flex-col items-center justify-center text-center pb-12">
           <div className="max-w-3xl fade-up">
             <div className="inline-flex items-center gap-3 mb-8 px-4 py-2 border border-white/30 rounded-full">
-              <img src="/images/nobel-emblem.png" alt="Leverantör Nobelmiddag 2025" style={{ height: '20px', width: 'auto', filter: 'brightness(0) invert(1)', opacity: 0.85 }} />
+              <img src={imgSrc('/images/nobel-emblem.png')} alt="Leverantör Nobelmiddag 2025" style={{ height: '20px', width: 'auto', filter: 'brightness(0) invert(1)', opacity: 0.85 }} />
               <span style={{ color: 'rgba(244,239,228,0.9)', fontSize: '0.6rem', letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 500 }}>
                 Serverades på Nobelmiddagen 2025
               </span>
@@ -103,7 +104,7 @@ const Index = () => {
                   </div>
                   {p.nobel && (
                     <div className="mt-2 flex justify-center">
-                      <img src="/images/nobel-emblem.png" alt="Nobelmiddag 2025" style={{ height: '18px', width: 'auto' }} />
+                      <img src={imgSrc('/images/nobel-emblem.png')} alt="Nobelmiddag 2025" style={{ height: '18px', width: 'auto' }} />
                     </div>
                   )}
                 </Link>

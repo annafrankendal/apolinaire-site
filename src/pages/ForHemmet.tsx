@@ -4,6 +4,7 @@ import { SiteFooter } from '@/components/site/SiteFooter'
 import { TableConfigurator } from '@/components/site/TableConfigurator'
 import { SHOP_URL } from '@/data/products'
 import { SEO } from '@/components/SEO'
+import { imgSrc } from '@/lib/img'
 
 const tips = [
   {
@@ -28,8 +29,8 @@ const tips = [
   },
 ]
 
-const imgHero = '/images/hemma-smak.jpg'
-const imgTable = '/images/skaal-sallskap.jpg'
+const imgHero = imgSrc('/images/hemma-smak.jpg')
+const imgTable = imgSrc('/images/skaal-sallskap.jpg')
 
 export default function ForHemmet() {
   return (
@@ -38,7 +39,7 @@ export default function ForHemmet() {
         title="Alkoholfri dryck till hemma middag | Apolinaire"
         description="Apolinaire är en alkoholfri smakförhöjare för hemma middagar. Tips för pairing, rätt glas och temperatur. Inkludera alla vid bordet med ett glas som hör hemma."
         canonical="https://apolinaire.se/for-hemmet"
-        image="/images/hemma-smak.jpg"
+        image={imgSrc('/images/hemma-smak.jpg')}
       />
       <SiteHeader />
 
@@ -113,7 +114,7 @@ export default function ForHemmet() {
             <Button asChild variant="quiet" size="editorialLg" className="border-bone text-bone hover:bg-bone hover:text-ink">
               <a href={SHOP_URL} target="_blank" rel="noreferrer">Beställ via Mylla</a>
             </Button>
-            <img src="/images/nobel-emblem.png" alt="Leverantör Nobelmiddag 2025" style={{ height: '36px', width: 'auto', filter: 'brightness(0) invert(1)', opacity: 0.45 }} />
+            <img src={imgSrc('/images/nobel-emblem.png')} alt="Leverantör Nobelmiddag 2025" style={{ height: '36px', width: 'auto', filter: 'brightness(0) invert(1)', opacity: 0.45 }} />
           </div>
         </div>
       </section>
